@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Roboto+Slab&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dosis', sans-serif;
+  background-color: #e9ecef;
+}
+
+.text_color {
+  color: #0f0f10;
+}
+
+.btn {
+  background-color: #4d4e51;
+}
+
+.second {
+  background-color: #becaef;
+}
+
+.blur-effect-theme {
+  @apply bg-white/50 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 opacity-100 z-[100] shadow-sm shadow-slate-100 transition-all duration-300;
+}
+
+.navColor {
+  background-color: rgb(7, 160, 207);
+}
+
+.borderLeft {
+  border-left: 1px black solid;
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.toollipText {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: white;
+  white-space: nowrap;
+  padding: 10px 15px;
+  border-radius: 7px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.toollipText::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 15px solid;
+  border-color: #000 #0000 #0000 #0000;
+}
+
+.tooltip:hover .toollipText {
+  top: -260%;
+  visibility: visible;
+  opacity: 1;
+}
+.line {
+  @apply border border-black my-5;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+.wrapper img {
+  transition: all 1s ease;
+  cursor: pointer;
+}
+.wrapper img:hover {
+  transform: scale(1.1);
+}
+
+.textChange {
+  overflow: hidden;
+}
+.textChange img {
+  transition: all 1s ease;
+  cursor: pointer;
+}
+.textChange img:hover {
+  transform: scale(1.1);
+}
